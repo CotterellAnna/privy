@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Privy</title>
+</head>
+<body>
+    <main class="chatRoom__Main">
+        <header>
+            <i class="ri-arrow-left-line"></i>
+            <div class="Name">
+                <h3 id="chatroomName"></h3>
+                <p id="userName"></p>
+            </div>
+            <i class="ri-settings-line" id="settingsIcon"></i>
+        </header>
+        <div class="groupMembers">
+            <img src="./images/Rectangle 6.png" alt="dp" class="img_one">
+            <img src="./images/Rectangle 7.png" alt="dp" class="img_two">
+            <img src="./images/Rectangle 8.png" alt="dp" class="img_three">
+            <img src="./images/Rectangle 9.png" alt="dp" class="img_four">
+            <img src="./images/Rectangle 10.png" alt="dp" class="img_five">
+            <img src="./images/Rectangle 24.png" alt="dp" class="img_six">
+        </div>
+       <div class="chat">
+            <div class="chatBox">
+                <p>
+                    Hello, how una de?
+                    <span>
+                        10:03AM
+                    </span>
+                </p>
+            </div>
+            <div class="chatBox sender">
+                <p>
+                    Omo I dey oh
+                    <span>
+                        10:04AM
+                    </span>
+                </p>
+            </div>
+            <div class="chatBox">
+                <p>
+                    So, how did your day go? Trust it went well?
+                    <span>
+                        10:04AM
+                    </span>
+                </p>
+            </div>
+            <div class="chatBox sender">
+                <p>
+                    If not for God, sapa for don kill person
+                    <span>
+                        10:08AM
+                    </span>
+                </p>
+            </div>
+       </div>
+       <form id="form" class="message_input">
+        <i class="ri-emotion-laugh-line"></i>
+        <input type="text" id="message" placeholder="Type a message" autocomplete="off">
+        <button type="submit" >Send Message</button>
+       </form>
+    </main>
+    <aside class="chatRoom__Aside aside" id="chatroom">
+        <div class="close">
+            <i class="ri-close-circle-fill" id="close"></i>
+        </div>
+        <h2 id="display_pictureText">
+            
+        </h2>
+       <div class="groupInfo">
+           <h4>group info</h4>
+           <div class="groupInfo__list">
+            <div class="users">
+                <h3>21</h3>
+                <p>Users Online</p>
+            </div>
+            <div class="users">
+                 <h3>5</h3>
+                 <p>Users Typing</p>
+             </div>
+             <div class="users">
+                 <h3>7</h3>
+                 <p>Links shared</p>
+             </div>
+           </div>
+       </div>
+       <div class="settings">
+           <h4>settings</h4>
+           <div class="settingsList">
+            <div class="settingsItem">
+                <input type="checkbox" id="hideChat" /><label for="hideChat">Toggle</label>
+                <p class="settingsText">Hide my chat</p>
+           </div>
+           <div class="settingsItem">
+                <input type="checkbox" id="deleteAll" /><label for="deleteAll">Toggle</label>
+                <p class="settingsText">Delete all chats</p>
+           </div>
+           <div class="settingsItem delete">
+                <input type="checkbox" id="deleteInterval" /><label for="deleteInterval">Toggle</label>
+                <p class="settingsText">Delete chat every <span id="seconds_value"></span> seconds</p>
+                <div class="changeNum" id="reduce">
+                    -
+                </div>
+                <div class="changeNum" id="add">
+                    +
+                </div>
+            </div>
+           </div>
+       </div>
+    </aside>
+    <script src="./main.js"></script>
+</body>
+</html>

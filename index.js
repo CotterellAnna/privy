@@ -14,8 +14,9 @@ function saveNames(e){
 
     localStorage.setItem('user', data);
 
-    let current_href = window.location.href
-    window.location.href = window.location.href.replace(current_href, '/chatRoom.html');
+    let current_href = window.location.href;
+    let current_pathname = window.location.pathname;
+    window.location.href = window.location.href.replace(current_href, `${current_pathname}chatRoom.html`);
 }
 
 let register = document.getElementsByClassName('register');

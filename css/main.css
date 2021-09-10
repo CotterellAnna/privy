@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'GT Walsheim Pro';
+  font-family: "GT Walsheim Pro";
   src: url("../fonts/GTWalsheimPro-Medium.ttf");
 }
 
 * {
-  font-family: 'GT Walsheim Pro';
+  font-family: "GT Walsheim Pro";
   margin: 0px;
   padding: 0px;
 }
@@ -79,18 +79,18 @@ body {
 }
 
 .welcome h3 {
-  color: #0E393A;
+  color: #0e393a;
   font-size: 30px;
   font-weight: bolder;
   margin: 5px 0px;
 }
 
 .welcome h3 span {
-  color: #FF8845;
+  color: #ff8845;
 }
 
 .welcome p {
-  color: #0E393A;
+  color: #0e393a;
 }
 
 main {
@@ -107,7 +107,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #E5E5E5;
+  background: #e5e5e5;
   height: 100vh;
   width: 100%;
   padding-left: 100px;
@@ -127,7 +127,7 @@ main .main_content h2 {
   font-size: 64px;
   line-height: 60px;
   letter-spacing: 3px;
-  color: #0E393A;
+  color: #0e393a;
   width: 70%;
 }
 
@@ -140,7 +140,7 @@ main .main_content h2 img {
 }
 
 main .main_content h2 span {
-  color: #FF8845;
+  color: #ff8845;
 }
 
 main .main_content .description {
@@ -175,14 +175,14 @@ main #name_roomName #roomName {
 
 main #name_roomName #chatName {
   width: 35%;
-  border-left: 2px solid #E5E5E5;
+  border-left: 2px solid #e5e5e5;
 }
 
 main #name_roomName button {
   width: 30%;
   margin: 5px;
   border: none;
-  background: #FF8845;
+  background: #ff8845;
   color: white;
 }
 
@@ -235,7 +235,7 @@ aside {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #0E393A;
+  background: #0e393a;
   height: 100vh;
   width: 100%;
 }
@@ -266,7 +266,7 @@ aside .chatPreview__profile {
   height: 59px;
   border-radius: 50%;
   margin: 0px 5px;
-  background: #FF884536;
+  background: #ff884536;
 }
 
 aside .chatPreview__text {
@@ -286,7 +286,7 @@ aside .chatPreview__text {
 }
 
 aside .chatPreview__text .text {
-  background: #FFFFFF80;
+  background: #ffffff80;
   margin-bottom: 5px;
   border-radius: 5px;
 }
@@ -317,7 +317,7 @@ aside .mobileApp {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #FF8845;
+  background: #ff8845;
   margin: 0px 20px 20px;
   padding: 40px 40px;
   border-radius: 10px;
@@ -370,9 +370,9 @@ aside .mobileApp__links img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #0E393A;
+  color: #0e393a;
   padding: 10px 0px;
-  border-bottom: 1px solid #C4C4C4;
+  border-bottom: 1px solid #c4c4c4;
   height: 8vh;
 }
 
@@ -398,7 +398,7 @@ aside .mobileApp__links img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #C4C4C4;
+  border-bottom: 1px solid #c4c4c4;
 }
 
 .chatRoom__Main .chat {
@@ -412,7 +412,7 @@ aside .mobileApp__links img {
   display: flex;
   margin: 10px 0px;
   width: 100%;
-  color: #0E393A;
+  color: #0e393a;
   word-wrap: break-word;
 }
 
@@ -430,7 +430,7 @@ aside .mobileApp__links img {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 40%;
-  background: #FF88451A;
+  background: #ff88451a;
 }
 
 .chatRoom__Main .chat .chatBox p span {
@@ -440,7 +440,7 @@ aside .mobileApp__links img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #FF8845;
+  color: #ff8845;
   width: 100%;
   font-size: 8px;
   margin: 5px 0px;
@@ -456,7 +456,7 @@ aside .mobileApp__links img {
 }
 
 .chatRoom__Main .chat .sender p {
-  background: #0E393A;
+  background: #0e393a;
   border-radius: 15px 15px 0px 15px;
 }
 
@@ -491,7 +491,7 @@ aside .mobileApp__links img {
 }
 
 .chatRoom__Main .message_input button {
-  background: #FF8845;
+  background: #ff8845;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -538,19 +538,28 @@ aside .mobileApp__links img {
 
 .chatRoom__Aside #display_pictureText {
   text-align: center;
-  background: #0E393A;
-  color: #FF8845;
-  padding: 46px 40px;
+  background: #0e393a;
+  color: #ff8845;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 72px;
-  width: 120px;
-  border-radius: 70%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   margin-bottom: 40px;
 }
 
 .chatRoom__Aside .groupInfo {
   width: 85%;
-  border-top: 2px solid #E5E5E5;
-  border-bottom: 2px solid #E5E5E5;
+  border-top: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
 }
 
 .chatRoom__Aside .groupInfo__list {
@@ -566,7 +575,7 @@ aside .mobileApp__links img {
 .chatRoom__Aside .groupInfo__list .users {
   width: 101px;
   height: 103px;
-  background: #FF88451A;
+  background: #ff88451a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,7 +589,7 @@ aside .mobileApp__links img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #0E393A;
+  color: #0e393a;
   padding: 10px;
 }
 
@@ -590,7 +599,7 @@ aside .mobileApp__links img {
 
 .chatRoom__Aside h4 {
   text-transform: uppercase;
-  color: #FF8845;
+  color: #ff8845;
   margin: 30px 0px 23px;
 }
 
@@ -617,10 +626,10 @@ aside .mobileApp__links img {
 .chatRoom__Aside .settings .settingsList .settingsItem p {
   font-size: 16px;
   font-weight: normal;
-  color: #0E393A;
+  color: #0e393a;
 }
 
-.chatRoom__Aside .settings .settingsList .settingsItem input[type=checkbox] {
+.chatRoom__Aside .settings .settingsList .settingsItem input[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -639,7 +648,7 @@ aside .mobileApp__links img {
 }
 
 .chatRoom__Aside .settings .settingsList .settingsItem label:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 1px;
   left: 1px;
@@ -652,7 +661,7 @@ aside .mobileApp__links img {
 }
 
 .chatRoom__Aside .settings .settingsList .settingsItem input:checked + label {
-  background: #FF8845;
+  background: #ff8845;
 }
 
 .chatRoom__Aside .settings .settingsList .settingsItem input:checked + label:after {
@@ -675,8 +684,8 @@ aside .mobileApp__links img {
 }
 
 .chatRoom__Aside .settings .settingsList .delete .changeNum {
-  background: #FF88451A;
-  color: #FF8845;
+  background: #ff88451a;
+  color: #ff8845;
   padding: 5px 12px;
   font-size: 25px;
   margin: 0px 10px;
@@ -699,7 +708,7 @@ aside .mobileApp__links img {
 
 .close #close {
   font-size: 30px;
-  color: #FF8845;
+  color: #ff8845;
 }
 
 .register {

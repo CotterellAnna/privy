@@ -14,7 +14,8 @@ function saveNames(e){
 
     localStorage.setItem('user', data);
 
-    window.location.href = window.location.href.replace('index.html', 'chatRoom.html');
+    // window.location.href = window.location.href.replace('index.html', 'chatRoom.html');
+    window.open(window.location.href.replace('index.html', 'chatRoom.html'), '_blank');
 }
 
 let register = document.getElementsByClassName('register');

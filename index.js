@@ -14,7 +14,8 @@ function saveNames(e){
 
     localStorage.setItem('user', data);
 
-    window.location.href = window.location.hostname + '/privy/chatRoom.html';
+    let current_href = window.location.href
+    window.location.href = window.location.href.replace(current_href, '/chatRoom.html');
 }
 
 let register = document.getElementsByClassName('register');

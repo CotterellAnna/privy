@@ -51,10 +51,6 @@ myForm.addEventListener('submit', function (e) {
     </div>
     `
 
-    deleteChatBtn = document.querySelectorAll('.delete_chat');
-    deleteChatBtn.forEach(e => {
-        e.setAttribute('onclick', 'deleteChat(this)')
-    })
 
     if (Message.value !== '') {
         chat.innerHTML += newMessage;

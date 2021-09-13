@@ -514,6 +514,7 @@ aside .mobileApp__links img {
           flex: 1;
   margin: 0px 10px;
   height: 100%;
+  max-width: none;
 }
 
 .chatRoom__Main .message_input button {

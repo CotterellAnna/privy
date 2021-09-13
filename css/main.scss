@@ -262,8 +262,15 @@ aside {
         padding: 10px 0px;
         border-bottom: 1px solid #c4c4c4;
         height: 8vh;
+        a{
+            color: #0e393a;
+            text-decoration: none;
+        }
         i {
             font-size: 40px;
+            &:hover{
+                cursor: pointer;
+            }
         }
         .Name {
             flex: 1;

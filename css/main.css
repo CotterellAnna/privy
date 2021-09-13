@@ -376,8 +376,17 @@ aside .mobileApp__links img {
   height: 8vh;
 }
 
+.chatRoom__Main header a {
+  color: #0e393a;
+  text-decoration: none;
+}
+
 .chatRoom__Main header i {
   font-size: 40px;
+}
+
+.chatRoom__Main header i:hover {
+  cursor: pointer;
 }
 
 .chatRoom__Main header .Name {

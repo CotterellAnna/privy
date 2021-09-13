@@ -56,6 +56,7 @@ myForm.addEventListener('submit', function(e) {
         userName.innerText = '';
         //deleting chats at interval when it's on
         delete_();
+        hidechat_();
     }
 })
 // to open and close the settings tab
@@ -97,11 +98,11 @@ function hidechat_(){
 
     if(hideChat.checked == true){
         senderChat.forEach(e => {
-            e.style.visibility='hidden'
+            e.style.display='none'
         })
     }else{
         senderChat.forEach(e => {
-            e.style.visibility='visible'
+            e.style.display='flex'
         })
     }
 }

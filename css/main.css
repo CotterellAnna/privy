@@ -461,12 +461,29 @@ aside .mobileApp__links img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   visibility: visible;
 }
 
 .chatRoom__Main .chat .sender p {
   background: #0e393a;
   border-radius: 15px 15px 0px 15px;
+}
+
+.chatRoom__Main .chat .sender i {
+  color: #00000099;
+}
+
+.chatRoom__Main .chat .sender i:hover {
+  cursor: pointer;
+  -webkit-animation-name: increaseSize;
+          animation-name: increaseSize;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .chatRoom__Main .message_input {
@@ -504,6 +521,28 @@ aside .mobileApp__links img {
   color: white;
   border: none;
   padding: 10px 20px;
+}
+
+@-webkit-keyframes increaseSize {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes increaseSize {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 
 @-webkit-keyframes slideIn {

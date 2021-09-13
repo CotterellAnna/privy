@@ -8,6 +8,8 @@ let chatroomSettings = document.getElementById('chatroom');
 let displayPicture = document.getElementById('display_pictureText');
 let user = JSON.parse(localStorage.getItem('user'));
 let chatroom_Main = document.querySelector('.chatRoom__Main');
+let deleteChatBtn = document.querySelectorAll('.delete_chat');
+
 
 
 chat.scrollTo(0, chat.scrollHeight);
@@ -17,22 +19,22 @@ let dp = user.Roomname.split('');
 displayPicture.innerText = dp[0];
 // Adding name + typing to the header
 Message.setAttribute('oninput', 'typing()');
-function typing(){
+function typing() {
     userName.innerText = user.username + ' is typing...';
 }
 
 
 
 //adding text to the chat section
-myForm.addEventListener('submit', function(e) {
+myForm.addEventListener('submit', function (e) {
     e.preventDefault();
     //getting time the chat i sbeing sent in real-time
     let hour = new Date().getHours();
     let minute = new Date().getMinutes();
     let ampm;
-    if(hour<=12){
+    if (hour <= 12) {
         ampm = 'AM';
-    }else{
+    } else {
         ampm = 'PM';
         hour = hour - 12;
     }
@@ -45,10 +47,16 @@ myForm.addEventListener('submit', function(e) {
                 ${time}
              </span>
         </p>
+        <i class="ri-delete-bin-5-line delete_chat"></i>
     </div>
     `
-    
-    if(Message.value !== ''){
+
+    deleteChatBtn = document.querySelectorAll('.delete_chat');
+    deleteChatBtn.forEach(e => {
+        e.setAttribute('onclick', 'deleteChat(this)')
+    })
+
+    if (Message.value !== '') {
         chat.innerHTML += newMessage;
         Message.value = '';
         chat.scrollTo(0, chat.scrollHeight);
@@ -57,32 +65,38 @@ myForm.addEventListener('submit', function(e) {
         //deleting chats at interval when it's on
         delete_();
         hidechat_();
+        deleteChatBtn = document.querySelectorAll('.delete_chat');
+        deleteChatBtn.forEach(e => {
+            e.setAttribute('onclick', 'deleteChat(this)')
+        })
     }
+    console.log(deleteChatBtn)
+
 })
 // to open and close the settings tab
 settingsIcon.addEventListener('click', openSettings);
-function openSettings(e){
+function openSettings(e) {
     e.preventDefault();
-    if(chatroomSettings.style.display=='none'){
-        chatroomSettings.style.display='flex';
-    }else{
-        chatroomSettings.style.display='none';
+    if (chatroomSettings.style.display == 'none') {
+        chatroomSettings.style.display = 'flex';
+    } else {
+        chatroomSettings.style.display = 'none';
     }
     // settingsIcon.removeEventListener('click', openSettings);
 }
 
 //media query
 
-if(window.innerWidth <= 600){
+if (window.innerWidth <= 600) {
     settingsIcon.addEventListener('click', openSettings_);
 }
-function openSettings_(){
-    if(chatroomSettings.style.display='none'){
+function openSettings_() {
+    if (chatroomSettings.style.display = 'none') {
         console.log('hey')
-        chatroom_Main.style.display='none';
-        chatroomSettings.style.display='flex';
-    }else{
-        chatroom_Main.style.display='flex';
+        chatroom_Main.style.display = 'none';
+        chatroomSettings.style.display = 'flex';
+    } else {
+        chatroom_Main.style.display = 'flex';
     }
 }
 
@@ -93,30 +107,30 @@ let deleteInterval = document.getElementById('deleteInterval');
 
 //function to hide the chat
 hideChat.setAttribute('onchange', 'hidechat_()');
-function hidechat_(){
+function hidechat_() {
     let senderChat = document.querySelectorAll('.sender');
 
-    if(hideChat.checked == true){
+    if (hideChat.checked == true) {
         senderChat.forEach(e => {
-            e.style.display='none'
+            e.style.display = 'none'
         })
-    }else{
+    } else {
         senderChat.forEach(e => {
-            e.style.display='flex'
+            e.style.display = 'flex'
         })
     }
 }
 
 //function to delete all chats
 deleteAll.setAttribute('onchange', 'deleteAll_()');
-function deleteAll_(){
+function deleteAll_() {
     let chats = document.querySelectorAll('.chatBox');
-    if(deleteAll.checked == true){
+    if (deleteAll.checked == true) {
         chats.forEach(e => {
             e.remove();
         })
         setTimeout((e => {
-        deleteAll.checked = false;
+            deleteAll.checked = false;
         }), 500)
     }
 }
@@ -129,35 +143,35 @@ let reduce = document.getElementById('reduce');
 
 // function to delete chats at an interval
 deleteInterval.setAttribute('onchange', 'delete_()');
-function delete_(){
-    
-    if(deleteInterval.checked == true && seconds.innerText > 0){
+function delete_() {
+
+    if (deleteInterval.checked == true && seconds.innerText > 0) {
         let chats = document.querySelectorAll('.chatBox');
         setTimeout((e => {
             chats.forEach(e => {
                 e.remove();
             })
-        }), (seconds.innerText*1000))
-    }else if(seconds.innerText == 0){
+        }), (seconds.innerText * 1000))
+    } else if (seconds.innerText == 0) {
         deleteInterval.checked = false;
     }
 }
 
 // increase and reduce interval
 add.setAttribute('onclick', 'add_()');
-reduce.setAttribute('onclick','reduce_()');
+reduce.setAttribute('onclick', 'reduce_()');
 
 //function to increase the interval
-function add_(){
+function add_() {
     seconds.innerText++
 }
 
 //function to decrease interval
-function reduce_(){
-    if(seconds.innerText == 0){
+function reduce_() {
+    if (seconds.innerText == 0) {
 
     }
-    else{
+    else {
         seconds.innerText--
     }
 }
@@ -168,7 +182,18 @@ let close_ = document.getElementById('close')
 
 close_.setAttribute('onclick', '_close()');
 
-function _close(){
-    chatroomSettings.style.display='none';
-    chatroom_Main.style.display='flex';
+function _close() {
+    chatroomSettings.style.display = 'none';
+    chatroom_Main.style.display = 'flex';
+}
+
+
+// delete chat button
+deleteChatBtn = document.querySelectorAll('.delete_chat');
+deleteChatBtn.forEach(e => {
+    e.setAttribute('onclick', 'deleteChat(this)')
+})
+function deleteChat(e) {
+    e.parentElement.remove(e);
+
 }
